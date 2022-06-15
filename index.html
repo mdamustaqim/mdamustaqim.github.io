@@ -98,15 +98,28 @@
 	  });
 	    
 	  purchaseButton.addEventListener('click', event => {
-		  fbq('track', 'Purchase', {
-			  contents: [
-				  {'id': '1234', 'quantity': 2},
-				  {'id': '4642', 'quantity': 1}
-			  ],
-			  content_type: 'product',
-			  value: 21.97,
-			  currency: 'USD'
-		  });
+		window.dataLayer = window.dataLayer || [];
+		window.gtag = window.gtag || function(){dataLayer.push(arguments);}
+
+		gtag('event', 'Purchase', {
+			'transaction_id': 't_12345',
+			'currency': 'USD',
+			'order_id': 123,
+			'value' : '1.99',
+			user_data: {
+				email_address: 'johnsmith@email.com',
+				phone_number: '1234567890',
+				address: {
+					first_name: 'john',
+					last_name: 'smith',
+					city: 'menlopark',
+					region: 'ca',
+					postal_code: '94025',
+					country: 'usa',
+				},
+			},
+			items: [{item_id: '123', item_name: 'title', quantity: 3, price: 123}],
+		})
 	  });
 	  
 	  custom123Button.addEventListener('click', event => {
