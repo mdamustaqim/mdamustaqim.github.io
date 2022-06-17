@@ -2,15 +2,14 @@
 <html>
   <head>
     <meta charset="utf-8"/>
-    <!--<script>
+    <script>
       !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
       n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
       n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
       t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
       document,'script','https://connect.facebook.net/en_US/fbevents.js');
-      fbq('init', '2600509983589227');
-      fbq('track', 'Purchase', {currency: 'USD', value: 25.59});
-    </script>-->
+      fbq('init', '1492653171080029');
+    </script>
 	<!-- Google Tag Manager -->
 	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -51,6 +50,7 @@
     <button id="custom123">custom123</button>
     <button id="duduptest">deduptest</button>
     <button id="pageview">pageview</button>
+    <button id="catalogvc">CatalogVC</button>
   </body>
   <script>
 	  const searchButton = document.getElementById('search');
@@ -61,6 +61,16 @@
 	  const custom123Button = document.getElementById('custom123');
 	  const deduptestButton = document.getElementById('duduptest');
 	  const pageviewButton = document.getElementById('pageview');	  
+	  const catalogvcButton = document.getElementById('catalogvc');	  
+	    
+	  catalogvcButton.addEventListener('click', event => {
+		  fbq('track', 'ViewContent', {
+			  content_ids: ['1234'],
+			  content_type: 'product',
+			  value: 0.50,
+			  currency: 'USD'
+		  });
+	  }); 
 	    
 	  searchButton.addEventListener('click', event => {
 		  fbq('track', 'Search', {
