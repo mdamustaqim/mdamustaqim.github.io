@@ -17,6 +17,13 @@
 	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 	})(window,document,'script','dataLayer','GTM-W4QLGWW');</script>
 	<!-- End Google Tag Manager -->
+	<script>
+	window.dataLayer = window.dataLayer || [];
+	window.gtag = window.gtag || function(){dataLayer.push(arguments);
+	dataLayer.push({
+	  'first_name': 'test_event_dl_push',
+	});
+	</script>
     <!-- FB IMG TAG
     <noscript>
       <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=2600509983589227&ev=PageView&noscript=1"/>
@@ -109,11 +116,7 @@
 	    
 	  purchaseButton.addEventListener('click', event => {
 		window.dataLayer = window.dataLayer || [];
-		window.gtag = window.gtag || function(){dataLayer.push(arguments);
-		dataLayer.push({
-		  'first_name': 'test_event_dl_push',
-		});
-		}
+		window.gtag = window.gtag || function(){dataLayer.push(arguments);}
 
 		gtag('event', 'Purchase', {
 			'transaction_id': 't_12345',
