@@ -109,7 +109,11 @@
 	    
 	  purchaseButton.addEventListener('click', event => {
 		window.dataLayer = window.dataLayer || [];
-		window.gtag = window.gtag || function(){dataLayer.push(arguments);}
+		window.gtag = window.gtag || function(){dataLayer.push(arguments);
+		dataLayer.push({
+		  'first_name': 'test_event_dl_push',
+		});
+		}
 
 		gtag('event', 'Purchase', {
 			'transaction_id': 't_12345',
