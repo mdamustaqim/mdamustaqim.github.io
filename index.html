@@ -72,10 +72,10 @@
 	    
 	  catalogvcButton.addEventListener('click', event => {
 		  fbq('track', 'ViewContent', {
-			  content_ids: '1234',
-			  content_type: 'product',
-			  value: 0.50,
-			  currency: 'USD'
+			  value: .5,
+   			  currency: 'USD',
+    			  content_type: 'product', // required property
+    			  content_ids: '201'
 		  });
 	  }); 
 	    
