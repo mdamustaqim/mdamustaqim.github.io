@@ -68,11 +68,11 @@
 	  const custom123Button = document.getElementById('custom123');
 	  const deduptestButton = document.getElementById('duduptest');
 	  const pageviewButton = document.getElementById('pageview');	  
-	  const catalogvcButton = document.getElementById('catalogvc');	  
+	  const catalogvcButton = document.getElementById('catalogvcSingleNoArray');	  
 	    
 	  catalogvcButton.addEventListener('click', event => {
 		  fbq('track', 'ViewContent', {
-			  content_ids: ['1234'],
+			  content_ids: '1234',
 			  content_type: 'product',
 			  value: 0.50,
 			  currency: 'USD'
