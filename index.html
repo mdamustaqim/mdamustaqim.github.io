@@ -58,6 +58,7 @@
     <button id="duduptest">deduptest</button>
     <button id="pageview">pageview</button>
     <button id="catalogvc">catalogvcSingleNoArray</button>
+    <button id="belltest">catalogvcSingleNoArray</button>
   </body>
   <script>
 	  const searchButton = document.getElementById('search');
@@ -69,6 +70,7 @@
 	  const deduptestButton = document.getElementById('duduptest');
 	  const pageviewButton = document.getElementById('pageview');	  
 	  const catalogvcButton = document.getElementById('catalogvc');	  
+	  const belltest = document.getElementById('belltest');	  
 	    
 	  catalogvcButton.addEventListener('click', event => {
 		  fbq('track', 'AddToCart', {
@@ -76,6 +78,16 @@
    			  currency: 'USD',
     			  content_type: 'product', // required property
     			  content_ids: '201'
+		  });
+	  }); 
+	  
+	  
+	  belltest.addEventListener('click', event => {
+		  fbq('track', 'AddToCart', {
+			  value: .5,
+   			  currency: 'USD',
+    			  content_type: 'product', // required property
+    			  content_ids: "201"
 		  });
 	  }); 
 	    
