@@ -9,11 +9,10 @@
       t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
       document,'script','https://connect.facebook.net/en_US/fbevents.js');
       fbq('init', '1492653171080029', {
-	  country: 'us',
-      em: '6e3913852f512d76acff15d1e402c7502a5bbe6101745a7120a2a4833ebd2350',
-      ph: '123456789',
-      fn: 'test_fn',
-      ln: 'test_ln'
+	  country: '9732c83e3e03fffde2ee65a9d826df8c4dd623c27fb92b952fe62a02f0726f87',
+      em: 'f660ab912ec121d1b1e928a0bb4bc61b15f5ad44d5efdc4e1c92a25e99b8e44a',
+      ph: '74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b',
+      fn: '9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08'
 	});
       fbq('track', 'PageView');
     </script>
@@ -24,12 +23,13 @@
   <script>
     const purchaseButton = document.getElementById('purchase');
 
-	  purchaseButton.addEventListener('click', event => {
+    purchaseButton.addEventListener('click', event => {
 		  fbq('track', 'Purchase', {
-			  search_string: 'leather sandals',
-			  content_ids: ['1234', '2424', '1318', '6832'],
-			  content_type: 'product'
-		  });
+			transaction_id: 't_123456',
+            		currency: 'USD',
+           		order_id: 1234,
+           		value: '2.99'
+		  },{eventID: 'event_id'});
 	  });
   </script>
 </html>
