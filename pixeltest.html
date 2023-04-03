@@ -24,13 +24,12 @@
   <script>
     const purchaseButton = document.getElementById('purchase');
 
-    purchaseButton.addEventListener('click', event=>{
-        fbq('track','Purchase', {
-            transaction_id: 't_123456',
-            currency: 'USD',
-            order_id: 1234,
-            value: '2.99'
-        }, eventID: 'event_id');
-    });
+	  purchaseButton.addEventListener('click', event => {
+		  fbq('track', 'Purchase', {
+			  search_string: 'leather sandals',
+			  content_ids: ['1234', '2424', '1318', '6832'],
+			  content_type: 'product'
+		  });
+	  });
   </script>
 </html>
