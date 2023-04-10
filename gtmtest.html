@@ -23,4 +23,30 @@
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
   </body>
+  <script>
+    gtag('event', 'purchase', {
+   'transaction_id': 't_12345',
+   'currency': 'USD',
+   'value': 1.23,
+   user_data: {
+      email_address: 'johnsmith@email.com',
+      phone_number: '1234567890',
+      address: {
+         first_name: 'john',
+         last_name: 'smith',
+         city: 'menlopark',
+         region: 'ca',
+         postal_code: '94025',
+         country: 'usa',
+      },
+   },
+   items: [{
+      item_name: 'foo',
+      quantity: 5,
+      price: 123.45,
+      item_category: 'bar',
+      item_brand : 'baz',
+    }],
+});
+    </script>
 </html>
